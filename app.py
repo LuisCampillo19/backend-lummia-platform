@@ -13,7 +13,7 @@ from src.routes.achievement_routes import achievement_bp
 from src.routes.pomodoro_routes import pomodoro_bp
 from src.routes.clan_chat_routes import clan_chat_bp, register_socket_events
 
-socketio = SocketIO()
+socketio = SocketIO(async_mode='gevent')
 
 
 def create_app():
